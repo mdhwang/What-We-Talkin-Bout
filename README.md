@@ -1,29 +1,65 @@
-# What-We-Talkin-Bout
+# What We Talkin' Bout
 
-Lyrical analysis of rap music in America
+## Lyrical Analysis of Rap Music in America
 
-Artists divided into 4 regions (West Coast, East Coast, Mid West, Down South)
+I wanted to look into the commonalities / differences of lyrics produced by songs of rappers from different regions across America to see if the uniqueness of each region can be quantified.
 
-Top 25 artists chosen per region via Ranker.com
+Historically there has always been the West Coast vs East Coast rap beef but in the recent years there has been the boom of artists from the Mid West as well as Down South.
 
-Relevance trend calculated by plotting streaming platform popularity over Google Trends data
+![rappers](/images/rappers.png)
 
-Mid West seems to be the most popular - let's find out why!
+Now we just need to identify the representatives of each region.
 
-Chose top 3 artists per region for song lyrical analysis.
+## Who's It Gonna Be
 
-WebScraped AZ-Lyrics.com for lyrics information to hopefully find topical trends and subject matter
+The top 25 artists for each region was identified via polls on www.Ranker.com - a website that implements open sourced polls on various topics to crowdsource the widely accepted leaders of the category.
 
-Trends that became apparent were the popularity of the word "I'm" (talking about self) and frequency of curse words (bad boys).
+![ranker](/images/ranker.png)
 
-Plotted mean of each metric per song against each other (3440 songs analyzed)
 
-Mid West had least amount of cursing and average amount of "I'm" frequency
 
-Decided to bootstrap for better sampling info
+## Getting Hands on the Lyrics
 
-Took 4 random tracks from the top 25 artists per region
+Lyrical information for songs from all these artists can be found at www.azlyrics.com
 
-Bootstrapped sample data 1000 times to determine more confident mean values
+![azlyrics](/images/azlyrics.png)
 
-That's all folks.
+I developed a webscraping tool to crawl through the website to gather the raw HTML per track, clean it to get the lyrical data, and store it into a MongoDB database for future processing.
+
+### Raw Data
+![raw](/images/lyrics_raw.png)
+
+### Cleaned Data
+![cleaned](/images/lyrics_cleaned.png)
+
+
+CLEAN EACH SONG
+TFIDF PER SONG
+VECTORIZE EACH SONG
+COMBINED VECTORS PER ARTIST
+COMBINED ARTISTS PER REGION
+
+COMPARISON OF REGIONS
+
+CONCLUSIONS
+
+
+
+
+
+
+
+
+## Relevance of Each Region Over Time
+
+Another point of interest is the rise and falls of popularity for each region over time.
+
+Relevance is quantified by looking at Google Trends data per rapper over time combined with popularity numbers from Spotify and Soundcloud.
+
+![relevance](/images/relevance.png)
+
+
+
+
+
+
